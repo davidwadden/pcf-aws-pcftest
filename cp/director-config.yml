@@ -1,47 +1,47 @@
 az-configuration:
-- name: us-west-1b
-- name: us-west-1c
+- name: us-east-1a
+- name: us-east-1b
 network-assignment:
   network:
     name: infrastructure
   other_availability_zones: []
   singleton_availability_zone:
-    name: us-west-1b
+    name: us-east-1a
 networks-configuration:
   icmp_checks_enabled: false
   networks:
   - name: infrastructure
     subnets:
-    - iaas_identifier: ((infrastructure_subnet_b))
+    - iaas_identifier: ((infrastructure_subnet_a))
       cidr: 10.0.16.0/28
       dns: 10.0.0.2
       gateway: 10.0.16.1
       reserved_ip_ranges: 10.0.16.0-10.0.16.4
       availability_zone_names:
-      - us-west-1b
-    - iaas_identifier: ((infrastructure_subnet_c))
+      - us-east-1a
+    - iaas_identifier: ((infrastructure_subnet_b))
       cidr: 10.0.16.16/28
       dns: 10.0.0.2
       gateway: 10.0.16.17
       reserved_ip_ranges: 10.0.16.16-10.0.16.20
       availability_zone_names:
-      - us-west-1c
+      - us-east-1b
   - name: control-plane
     subnets:
-    - iaas_identifier: ((control_plane_subnet_b))
+    - iaas_identifier: ((control_plane_subnet_a))
       cidr: 10.0.4.0/26
       dns: 10.0.0.1
       gateway: 10.0.4.1
       reserved_ip_ranges: 10.0.4.1-10.0.4.10
       availability_zone_names:
-      - us-west-1b
-    - iaas_identifier: ((control_plane_subnet_c))
+      - us-east-1a
+    - iaas_identifier: ((control_plane_subnet_b))
       cidr: 10.0.4.64/26
       dns: 10.0.0.1
       gateway: 10.0.4.65
       reserved_ip_ranges: 10.0.4.64-10.0.4.73
       availability_zone_names:
-      - us-west-1c
+      - us-east-1b
 properties-configuration:
   director_configuration:
     allow_legacy_agents: true
@@ -75,7 +75,7 @@ properties-configuration:
     encrypted: false
     key_pair_name: ((env_name))-ops-manager-key
     name: default
-    region: us-west-1
+    region: us-east-1
     security_group: ((security_group))
     access_key_id: ((access_key_id))
     secret_access_key: ((secret_access_key))

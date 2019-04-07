@@ -1,7 +1,7 @@
 external_url: https://plane.cp.aws.pcftest.net
 persistent_disk_type: 10240
 network_name: control-plane
-azs: ["us-west-1b", "us-west-1c"]
+azs: ["us-east-1a", "us-east-1b"]
 vm_type: c4.xlarge
 wildcard_domain: plane.cp.aws.pcftest.net
 lets_encrypt_certificate:

@@ -209,7 +209,7 @@ Visit [Ops Manager](https://pcf.cp.aws.pcftest.net) and log in with `$OM_USERNAM
 
 ### Step 6. Assign AZs and Networks
 
-1. Singleton Availability Zone pick `us-west-1b`
+1. Singleton Availability Zone pick `us-east-1a`
 1. Network pick `infrastructure`
 
 ### Step 7 - 10
