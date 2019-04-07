@@ -10,9 +10,9 @@ terraform {
   required_version = "< 0.12.0"
 
   backend "s3" {
-    bucket = "aneumann-platform-state"
+    bucket = "dwadden-platform-state"
     key    = "cp/terraform.tfstate"
-    region = "us-west-1"
+    region = "us-east-1"
   }
 }
 
