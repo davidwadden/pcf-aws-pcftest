@@ -4,7 +4,7 @@ Group of PCF Foundations on AWS serving 63r53rk54v0r.com
 
 ## Summary
 
-This repository contains the configuration required for an example deployment of PCF to `aws.63r53rk54v0r.com`.
+This repository contains the configuration required for an example deployment of PCF to `aws.pcftest.net`.
 
 It describes the following foundations:
 - `cp`: a Control Plane used to manage all foundations, documented [here](cp/README.md)

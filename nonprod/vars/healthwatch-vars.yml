@@ -1,4 +1,4 @@
 ---
 taskcheck_client: healthwatch_client
 taskcheck_secret: ((healthwatch_taskcheck_secret))
-opsman_url: pcf.nonprod.aws.63r53rk54v0r.com
+opsman_url: pcf.nonprod.aws.pcftest.net

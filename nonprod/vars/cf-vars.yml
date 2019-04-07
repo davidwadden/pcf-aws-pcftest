@@ -1,8 +1,8 @@
 ---
 project: "nonprod"
 
-apps_domain: apps.nonprod.aws.63r53rk54v0r.com
-sys_domain: sys.nonprod.aws.63r53rk54v0r.com
+apps_domain: apps.nonprod.aws.pcftest.net
+sys_domain: sys.nonprod.aws.pcftest.net
 
 network_name: "pas"
 

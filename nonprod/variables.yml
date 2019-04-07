@@ -11,4 +11,4 @@ s3:
     installation: aneumann-backups
 
 credhub-client: nonprod_credhub_client
-credhub-server: plane.cp.aws.63r53rk54v0r.com:8844
+credhub-server: plane.cp.aws.pcftest.net:8844

@@ -1,6 +1,6 @@
 # Control Plane on AWS
 
-Following the [official documentation](https://control-plane-docs.cfapps.io/) to deploy a control plane to `cp.aws.63r53rk54v0r.com`
+Following the [official documentation](https://control-plane-docs.cfapps.io/) to deploy a control plane to `cp.aws.pcftest.net`
 
 Specs include:
 - Ops Manager 2.4.6
@@ -52,7 +52,7 @@ In the root DNS Zone (AWS) add a NS record with values `terraform output env_dns
 
 ## X. Configure Ops Manager
 
-1. Set env var `OM_TARGET` to `https://pcf.cp.aws.63r53rk54v0r.com`
+1. Set env var `OM_TARGET` to `https://pcf.cp.aws.pcftest.net`
 1. Set env var `OM_USERNAME` to `admin`
 1. Set env var `OM_PASSWORD` to `$(openssl rand -base64 10)`
 1. Set env var `OM_DP` to `$(openssl rand -base64 32)`
@@ -100,7 +100,7 @@ Using Ops Manager as a jumpbox.
 
 ## X. Upload assets to jumpbox
 
-1. Set env var `OPS_MANAGER_VM_URL` to `pcf.cp.aws.63r53rk54v0r.com`
+1. Set env var `OPS_MANAGER_VM_URL` to `pcf.cp.aws.pcftest.net`
 1. Set env var `OPS_MANAGER_KEY_PATH` to `opsman.pem`
 1. Create remote asset directory via  `ssh -i $OPS_MANAGER_KEY_PATH "ubuntu@${OPS_MANAGER_VM_URL}" mkdir control-plane-assets`
 1. Copy all assets via 
@@ -113,7 +113,7 @@ Using Ops Manager as a jumpbox.
 
 ## X. Upload releases to Bosh
 
-1. Fetch Bosh Command Line credentials via `https://pcf.cp.aws.63r53rk54v0r.com/api/v0/deployed/director/credentials/bosh_commandline_credentials`
+1. Fetch Bosh Command Line credentials via `https://pcf.cp.aws.pcftest.net/api/v0/deployed/director/credentials/bosh_commandline_credentials`
 1. SSH into Ops Manager
 1. `alias bosh="$BOSH_COMMAND_LINE_CREDENTIALS"`
 1. `cd control-plane-assets`
@@ -140,13 +140,13 @@ Using Ops Manager as a jumpbox.
 
 ## X. Obtain admin credentials
 
-1. Obtain [UUA Admin User Credentials](https://pcf.cp.aws.63r53rk54v0r.com/api/v0/deployed/director/credentials/uaa_admin_user_credentials) and populate `$UAA_ADMIN_USERNAME` and `$UAA_ADMIN_PASSWORD`
-1. Obtain [BOSH Command Line Credentials](https://pcf.cp.aws.63r53rk54v0r.com/api/v0/deployed/director/credentials/bosh_commandline_credentials) and populate `$BOSH_ENVIRONMENT`
+1. Obtain [UUA Admin User Credentials](https://pcf.cp.aws.pcftest.net/api/v0/deployed/director/credentials/uaa_admin_user_credentials) and populate `$UAA_ADMIN_USERNAME` and `$UAA_ADMIN_PASSWORD`
+1. Obtain [BOSH Command Line Credentials](https://pcf.cp.aws.pcftest.net/api/v0/deployed/director/credentials/bosh_commandline_credentials) and populate `$BOSH_ENVIRONMENT`
 1. SSH into Opsman
 1. `credhub api -s "$BOSH_ENVIRONMENT":8844 --ca-cert /var/tempest/workspaces/default/root_ca_certificate`
 1. `credhub login -u $UAA_ADMIN_USERNAME -p $UAA_ADMIN_PASSWORD`
 1. `credhub get -n /p-bosh/control-plane/uaa_users_admin -q` -> `$CP_PASSWORD`
-1. Visit [https://plane.cp.aws.63r53rk54v0r.com/]() and log in with `admin/$CP_PASSWORD`
+1. Visit [https://plane.cp.aws.pcftest.net/]() and log in with `admin/$CP_PASSWORD`
 
 ## X. Use control plane
 
@@ -175,7 +175,7 @@ Basically following the [documentation](https://docs.pivotal.io/pivotalcf/2-4/om
 
 ### Step 1. Access Ops Manager
 
-Visit [Ops Manager](https://pcf.cp.aws.63r53rk54v0r.com) and log in with `$OM_USERNAME` and `$OM_PASSWORD`.
+Visit [Ops Manager](https://pcf.cp.aws.pcftest.net) and log in with `$OM_USERNAME` and `$OM_PASSWORD`.
 
 ### Step 2. AWS Config
 

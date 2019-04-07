@@ -1,9 +1,9 @@
-external_url: https://plane.cp.aws.63r53rk54v0r.com
+external_url: https://plane.cp.aws.pcftest.net
 persistent_disk_type: 10240
 network_name: control-plane
 azs: ["us-west-1b", "us-west-1c"]
 vm_type: c4.xlarge
-wildcard_domain: plane.cp.aws.63r53rk54v0r.com
+wildcard_domain: plane.cp.aws.pcftest.net
 lets_encrypt_certificate:
   cert: |
     contents of certs/cert.pem
