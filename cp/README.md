@@ -18,7 +18,7 @@ Specs include:
 1. Log into AWS Console (`pcf-practice`)
 1. Navigate to [IAM screen](https://console.aws.amazon.com/iam/home#/users)
 1. Name user `$USERNAME-sa` with Programmatic access
-1. Create Custom policy named `aneumann-kms-custom` from JSON definition at https://github.com/pivotal-cf/terraforming-aws
+1. Create Custom policy named `dwadden-kms-custom` from JSON definition at https://github.com/pivotal-cf/terraforming-aws
 1. Attach appropriate policies and the custom policy created above
 1. Capture created credentials as `$AWS_ACCESS_KEY` and `$AWS_SECRET_KEY`
 

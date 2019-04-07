@@ -6,7 +6,7 @@ sys_domain: sys.nonprod.aws.pcftest.net
 
 network_name: "pas"
 
-mysql_notification_email: "aneumann@pivotal.io"
+mysql_notification_email: "dwadden@pivotal.io"
 
 # terraform output ops_manager_iam_user_access_key | pbcopy
 s3_access_key: ((opsman-iam-access-key))

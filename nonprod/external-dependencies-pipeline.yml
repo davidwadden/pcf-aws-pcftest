@@ -16,7 +16,7 @@ resources:
   source:
     private_key: ((combined_private_key))
     uri: ((combined.uri))
-    branch: master
+    branch: pcftest
     submodules: all
     depth: 1
 
