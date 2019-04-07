@@ -23,7 +23,7 @@ data "aws_iam_policy_document" "ops_manager" {
 }
 
 resource "aws_iam_policy" "ops_manager_role" {
-  name   = "${var.env_name}_ops_manager_role"
+  name   = "${var.env_name}_pcftest_ops_manager_role"
   policy = "${data.aws_iam_policy_document.ops_manager.json}"
 }
 
@@ -33,7 +33,7 @@ resource "aws_iam_role_policy_attachment" "ops_manager_policy" {
 }
 
 resource "aws_iam_policy" "ops_manager_user" {
-  name   = "${var.env_name}_ops_manager_user"
+  name   = "${var.env_name}_pcftest_ops_manager_user"
   policy = "${data.aws_iam_policy_document.ops_manager.json}"
 }
 
@@ -43,7 +43,7 @@ resource "aws_iam_user_policy_attachment" "ops_manager" {
 }
 
 resource "aws_iam_user" "ops_manager" {
-  name = "${var.env_name}_om_user"
+  name = "${var.env_name}_pcftest_om_user"
 }
 
 resource "aws_iam_access_key" "ops_manager" {
@@ -51,7 +51,7 @@ resource "aws_iam_access_key" "ops_manager" {
 }
 
 resource "aws_iam_role" "ops_manager" {
-  name = "${var.env_name}_om_role"
+  name = "${var.env_name}_pcftest_om_role"
 
   lifecycle {
     create_before_destroy = true
@@ -78,7 +78,7 @@ EOF
 }
 
 resource "aws_iam_instance_profile" "ops_manager" {
-  name = "${var.env_name}_ops_manager"
+  name = "${var.env_name}_pcftest_ops_manager"
   role = "${aws_iam_role.ops_manager.name}"
 
   lifecycle {
