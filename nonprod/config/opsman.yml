@@ -6,7 +6,7 @@ opsman-configuration:
     # terraform input secret_key
     secret_access_key: ((secret_access_key))
     # terraform output region
-    region: us-west-1
+    region: us-east-1
     vm_name: nonprod-ops-manager-vm
     boot_disk_size: 100
     # terraform output public_subnet_ids[0]

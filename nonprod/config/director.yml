@@ -91,7 +91,7 @@ properties-configuration:
     encrypted: false
     key_pair_name: ((key_pair_name))
     name: default
-    region: us-west-1
+    region: us-east-1
     security_group: ((security_group))
     access_key_id: ((access_key_id))
     secret_access_key: ((secret_access_key))

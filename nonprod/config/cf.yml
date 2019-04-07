@@ -242,13 +242,13 @@ product-properties:
   .properties.system_blobstore.external.encryption:
     value: false
   .properties.system_blobstore.external.endpoint:
-    value: https://s3-us-west-1.amazonaws.com
+    value: https://s3-us-east-1.amazonaws.com
   .properties.system_blobstore.external.iam_instance_profile_authentication:
     value: false
   .properties.system_blobstore.external.packages_bucket:
     value: ((packages_bucket))
   .properties.system_blobstore.external.region:
-    value: us-west-1
+    value: us-east-1
   .properties.system_blobstore.external.resources_bucket:
     value: ((resources_bucket))
   .properties.system_blobstore.external.secret_key:

@@ -4,7 +4,7 @@ combined:
   uri: git@github.com:noizwaves/pcf-aws-63r53rk54v0r.git
 
 s3:
-  region_name: us-west-1
+  region_name: us-east-1
   buckets:
     pivnet_products: aneumann-pivnet-products
     platform: aneumann-platform-state
